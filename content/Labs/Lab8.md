@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 8 — VLANs & Inter-VLAN Routing

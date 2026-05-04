@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Мидтерм — Troubleshooting кейсы

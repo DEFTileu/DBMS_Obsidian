@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 5 — IPv6 Routing & Inter-VLAN

@@ -1,3 +1,8 @@
+---
+  protected: true
+---
+
+
 #labs
 
 # Lab 2 — Basic IOS Configuration

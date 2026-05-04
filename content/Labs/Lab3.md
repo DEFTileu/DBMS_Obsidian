@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 3 — Application Layer

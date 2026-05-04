@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 # Learned Book Topics and Finished Labs
 
 > [!abstract] Зачем нужен этот note

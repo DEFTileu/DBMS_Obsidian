@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 10 — VLAN + Inter-VLAN Routing + DHCP + Relay Agent

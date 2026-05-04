@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Teacher Lab Pattern — как думает тичер и как он собирает lab

@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 4 — VLSM & IPv4 Static Routing

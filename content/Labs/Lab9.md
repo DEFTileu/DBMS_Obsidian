@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 9 — HSRP (First Hop Redundancy Protocol)

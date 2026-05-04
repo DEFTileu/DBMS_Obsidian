@@ -7,11 +7,13 @@ const isLabsSlug = (slug?: string) => slug === "Labs" || slug?.startsWith("Labs/
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
   header: [],
-  afterBody: [],
+  afterBody: [
+    Component.ProtectedGate({
+      serverUrl: "https://api-sduapp.javazhan.tech",
+    }),
+  ],
   footer: Component.Footer({
-    links: {
-      "⭐ Star on GitHub": "https://github.com/DEFTileu/CiscObsidian",
-    },
+    links: {},
   }),
 }
 

@@ -1,3 +1,7 @@
+---
+  protected: true
+---
+
 #labs
 
 # Lab 11a — WLC Configuration (WLAN, DHCP, SNMP)
