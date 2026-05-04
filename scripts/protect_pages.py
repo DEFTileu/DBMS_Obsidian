@@ -58,11 +58,21 @@ def find_protected_files() -> list[Path]:
     ]
 
 
+def slugify_segment(s: str) -> str:
+    s = re.sub(r"\s", "-", s)
+    s = s.replace("&", "-and-")
+    s = s.replace("%", "-percent")
+    s = s.replace("?", "").replace("#", "")
+    return s
+
+
 def md_to_html_path(md_path: Path) -> Path:
-    slug = md_path.relative_to(CONTENT_DIR).with_suffix("")
-    if slug.name == "index":
-        return PUBLIC_DIR / slug.parent / "index.html"
-    return PUBLIC_DIR / slug / "index.html"
+    rel = md_path.relative_to(CONTENT_DIR)
+    parts = [slugify_segment(p) for p in rel.parts]
+    slug_path = Path(*parts).with_suffix("")
+    if slug_path.name in ("index", "_index"):
+        return PUBLIC_DIR / slug_path.parent / "index.html"
+    return PUBLIC_DIR / slug_path.with_suffix(".html")
 
 
 def encrypt(key_hex: str, plaintext: str) -> str:
