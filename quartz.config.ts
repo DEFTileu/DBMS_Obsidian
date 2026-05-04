@@ -12,9 +12,7 @@ const config: QuartzConfig = {
     pageTitleSuffix: "",
     enableSPA: true,
     enablePopovers: true,
-    analytics: {
-      provider: "cloudflare",
-    },
+    analytics: null,
     locale: "en-US",
     baseUrl: "deftileu.github.io/CiscObsidian",
     ignorePatterns: ["private", "templates", ".obsidian"],

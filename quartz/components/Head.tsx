@@ -97,6 +97,11 @@ export default (() => {
             return resource
           }
         })}
+        <script
+          defer
+          src="https://static.cloudflareinsights.com/beacon.min.js"
+          data-cf-beacon='{"token": "c9af01fbba9146f4a850466e11a8fe38"}'
+        />
       </head>
     )
   }
