@@ -1,3 +1,5 @@
+const SESSION_KEY = "protect_key"
+
 function hexToBytes(hex: string): Uint8Array {
   const arr = new Uint8Array(hex.length / 2)
   for (let i = 0; i < arr.length; i++) {
@@ -19,10 +21,24 @@ async function decryptContent(keyHex: string, encHex: string): Promise<string> {
   return new TextDecoder().decode(plain)
 }
 
+function revealContent(article: HTMLElement, key: string, encHex: string) {
+  decryptContent(key, encHex).then((html) => {
+    article.removeAttribute("data-enc")
+    article.classList.remove("protected-gate")
+    article.innerHTML = html
+  })
+}
+
 function setupProtectedPage(article: HTMLElement) {
   const encHex = article.dataset.enc!
   const serverUrl = (document.getElementById("protect-config") as HTMLElement | null)?.dataset
     .server ?? ""
+
+  const cachedKey = sessionStorage.getItem(SESSION_KEY)
+  if (cachedKey) {
+    revealContent(article, cachedKey, encHex)
+    return
+  }
 
   article.innerHTML = `
     <div class="protect-icon">🔒</div>
@@ -63,10 +79,8 @@ function setupProtectedPage(article: HTMLElement) {
       }
 
       const { key } = (await res.json()) as { key: string }
-      const html = await decryptContent(key, encHex)
-      article.removeAttribute("data-enc")
-      article.classList.remove("protected-gate")
-      article.innerHTML = html
+      sessionStorage.setItem(SESSION_KEY, key)
+      revealContent(article, key, encHex)
     } catch {
       errEl.textContent = "Ошибка подключения к серверу"
       errEl.style.display = "block"
