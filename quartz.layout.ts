@@ -1,8 +1,6 @@
 import { PageLayout, SharedLayout } from "./quartz/cfg"
 import * as Component from "./quartz/components"
 
-const isLabsSlug = (slug?: string) => slug === "Labs" || slug?.startsWith("Labs/")
-
 // components shared across all pages
 export const sharedPageComponents: SharedLayout = {
   head: Component.Head(),
@@ -42,15 +40,13 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      filterFn: (node) => node.slugSegment !== "tags" && node.slugSegment !== "Labs",
+      filterFn: (node) => node.slugSegment !== "tags",
     }),
   ],
   right: [
     Component.Graph(),
     Component.DesktopOnly(Component.TableOfContents()),
-    Component.Backlinks({
-      filterFn: (file) => !isLabsSlug(file.slug),
-    }),
+    Component.Backlinks(),
   ],
 }
 
@@ -70,7 +66,7 @@ export const defaultListPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer({
-      filterFn: (node) => node.slugSegment !== "tags" && node.slugSegment !== "Labs",
+      filterFn: (node) => node.slugSegment !== "tags",
     }),
   ],
   right: [],

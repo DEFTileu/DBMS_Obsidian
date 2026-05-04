@@ -13,7 +13,7 @@ const config: QuartzConfig = {
     enableSPA: true,
     enablePopovers: true,
     analytics: {
-      provider: "plausible",
+      provider: "cloudflare",
     },
     locale: "en-US",
     baseUrl: "deftileu.github.io/CiscObsidian",
