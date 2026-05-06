@@ -11,3 +11,8 @@
 [[1.4. Basic Router Configuration]]
 [[1.5. Verify Directly Connected Networks]]
 [[1.6. Module Practice and Quiz]]
+
+## Практика
+
+- [[Labs/Lab1|Lab 1 — Cisco Basic IOS Configurations]]
+- [[Labs/Lab2|Lab 2 — Basic IOS Configuration]]

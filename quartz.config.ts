@@ -81,7 +81,6 @@ const config: QuartzConfig = {
       Plugin.ContentIndex({
         enableSiteMap: true,
         enableRSS: true,
-        excludePaths: ["Labs"],
       }),
       Plugin.Assets(),
       Plugin.Static(),

@@ -8,6 +8,10 @@
 [[IPv6 Multicast Addresses]]
 [[Subnet an IPv6 Network]]
 
+## Практика
+
+- [[Labs/Lab5|Lab 5 — IPv6 Routing & Inter-VLAN]]
+- [[Labs/Lab6|Lab 6 — IPv6 Subnetting + ICMP]]
 
 
 ![[Screenshot 2026-04-17 at 19.58.52.png]]

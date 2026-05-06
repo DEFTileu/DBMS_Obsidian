@@ -5,3 +5,8 @@
 [[13.3. Configure a WPA2 Enterprise WLAN on the WLC]]
 [[13.4. Troubleshoot WLAN Issues]]
 [[13.5. Module Practice and Summary]]
+
+## Практика
+
+- [[Labs/Lab11a|Lab 11a — WLC Configuration (WLAN, DHCP, SNMP)]]
+- [[Labs/Lab11b|Lab 11b — Wireless Troubleshooting]]
